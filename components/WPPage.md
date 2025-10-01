@@ -1,16 +1,9 @@
-# 🌞 SunFish React Component Library
-
-This document contains props, usage examples, and notes for all **SunFish React components**.  
-Use it as a reference for development. we are using ant design version 4, so our components will have combined props with antd components
-
----
-
 ## 📌 Component: WPPage
 
 ### Overview
 - **Name**: `WPPage`  
 - **Description**: A component for every page creation, must use this WPPage component, so all pages will have the same result or layout.  
-- Import path: `lib/components/wp-page`
+- **Import path**: `lib/components/wp-page`
 
 ### Props
 
@@ -45,4 +38,6 @@ const ListingPage = (props) => {
     </WPPage>
   )
 }
+
+export default ListingPage;
 ```

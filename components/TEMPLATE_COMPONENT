@@ -1,0 +1,19 @@
+## 📌 Component: WPListing
+
+### Overview
+- **Name**: `ComponentName`  
+- **Description**: XXX
+- **Import path**: `lib/components/ComponentName`
+- **Origin Components**: XXX
+
+### Props ComponentName
+childrens of ComponentName
+| Prop Name | Type | Default | Required | Description |
+|-----------|------|---------|----------|-------------|
+| `title`   | `string` | — | ❌ | column name |
+
+### Usage
+```jsx
+
+
+```

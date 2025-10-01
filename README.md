@@ -9,9 +9,9 @@ We are using **Ant Design v4**, so some components combine AntD props.
 ## 📚 Components List
 
 - [WPPage](./components/WPPage.md)  
-- [WPForm](./components/WPForm.md)  
+<!-- - [WPForm](./components/WPForm.md)   -->
 - [WPListing](./components/WPListing.md)
-- [WPControl](./components/wpcontrol/README.md)
+<!-- - [WPControl](./components/wpcontrol/README.md) -->
 
 ---
 
@@ -24,5 +24,6 @@ We are using **Ant Design v4**, so some components combine AntD props.
 ## 📚 Utilities List
 
 - [getDictionary](./helpers/getDictionary.md) 
+- [formatDataResponseLC](./helpers/formatDataResponseLC.md) 
 
 ---

@@ -1,3 +1,6 @@
+<img width="347" height="114" alt="image" src="https://github.com/user-attachments/assets/ec2d77a0-bfa0-4d5d-aa1a-6c67101bee51" />
+
+
 # SunFish React Component Library
 
 This repository contains documentation for all **SunFish React components**.  

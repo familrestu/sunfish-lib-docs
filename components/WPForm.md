@@ -2,7 +2,7 @@
 
 ### Overview
 
-- **Name**: `WPFork`
+- **Name**: `WPForm`
 - **Description**: A component for every form creation, must use this WPForm component for create a form, so all form will have the same result or layout.
 - **Import path**: `import WPForm from 'lib/components/wp-form'`
 

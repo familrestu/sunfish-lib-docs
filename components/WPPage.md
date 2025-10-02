@@ -1,11 +1,11 @@
-## 📌 Component: WPPage
+### 📌 Component: WPPage
 
-### Overview
+#### Overview
 - **Name**: `WPPage`  
 - **Description**: A component for every page creation, must use this WPPage component, so all pages will have the same result or layout.  
 - **Import path**: `lib/components/wp-page`
 
-### Props
+#### Props
 
 | Prop Name | Type | Default | Required | Description |
 |-----------|------|---------|----------|-------------|
@@ -18,7 +18,7 @@
 | `staticBreadCrumb` | `string[]` | — | ❌ | update automatic breadcrumb generated based on current page URL |
 | `children` | `React.Children` | — | ❌ | content of the WPPage |
 
-### Usage
+#### Usage
 ```jsx
 
 /* file pages/test/listing-page/ListingPage */

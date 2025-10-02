@@ -1,18 +1,18 @@
-## 📌 Helpers: getDictionary
+### 📌 Helpers: getDictionary
 
-### Overview
+#### Overview
 - **Name**: `getDictionary`  
 - **Description**: to translate our words
 - **Import path**: `lib/helpers/utils/getDictionary`
 
-### Parameters
+#### Parameters
 childrens of ComponentName
 | Param Name | Type | Description |
 |-----------|------|-------------|
 | `textID`   | `string` | text id used for translate |
 | `defaultTranslations`   | `string` | default translations |
 
-### Usage
+#### Usage
 ```jsx
 import getDictionary from 'lib/helpers/utils/getDictionary'
 

@@ -1,11 +1,11 @@
-## 📌 Helpers: formatDataResponseLC
+### 📌 Helpers: formatDataResponseLC
 
-### Overview
+#### Overview
 - **Name**: `formatDataResponseLC`  
 - **Description**: standard tools to update Lucee query response to array of object
 - **Import path**: `lib/components/wp-form/wp-helpers/utilities`
 
-### Usage
+#### Usage
 ```jsx
 import { formatDataResponseLC } from 'lib/components/wp-form/wp-helpers/utilities';
 

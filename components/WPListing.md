@@ -1,12 +1,12 @@
-## 📌 Component: WPListing
+### 📌 Component: WPListing
 
-### Overview
+#### Overview
 - **Name**: `WPListing`  
 - **Description**: A component to render table list, also contain the card list for mobile view
 - **Import path**: `lib/components/wp-listing`
 - **Origin Components**: AntDesign v4 table components
 
-### Props WPListing
+#### Props WPListing
 
 | Prop Name | Type | Default | Required | Description |
 |-----------|------|---------|----------|-------------|
@@ -25,7 +25,7 @@
 | `cardColumnCount` | `{ xs: number, sm: number, md: number, lg: number, xl: number, xxl: number }` | — | ❌ | card component to be shown in listing | 
 | `customPayload` | `{[key: string]: unknown}` | — | ❌ | add some custom payload when system call the API | 
 
-### Props WPColumn
+#### Props WPColumn
 childrens of WPColumn
 | Prop Name | Type | Default | Required | Description |
 |-----------|------|---------|----------|-------------|
@@ -39,7 +39,7 @@ childrens of WPColumn
 | `width`   | `number` | 200 | ❌ | width of column |
 | `mask`   | `string` | — | ❌ | when you want to mask the result of the api, lets say you want 0 is equal to no, and 1 is equal to yes, then you can put `mask=0=No\|1=Yes` |
 
-### Props WPColumnGroup
+#### Props WPColumnGroup
 childrens of WPColumnGroup
 | Prop Name | Type | Default | Required | Description |
 |-----------|------|---------|----------|-------------|
@@ -48,7 +48,7 @@ childrens of WPColumnGroup
 | `showSorter`   | `boolean` | `true` | ❌ | show sorter in table header |
 | `showSearch`   | `boolean` | `true` | ❌ | show search in table header |
 
-### Usage
+#### Usage
 ```jsx
 
 /* file pages/test/listing-page/ListingComponent */

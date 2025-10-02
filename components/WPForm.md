@@ -1,12 +1,12 @@
-## 📌 Component: WPForm
+### 📌 Component: WPForm
 
-### Overview
+#### Overview
 
 - **Name**: `WPForm`
 - **Description**: A component for every form creation, must use this WPForm component for create a form, so all form will have the same result or layout.
 - **Import path**: `import WPForm from 'lib/components/wp-form'`
 
-### Props
+#### Props
 
 | Prop Name                        | Type                                                                        | Default                      | Required | Description                                                                                           |
 | -------------------------------- | --------------------------------------------------------------------------- | ---------------------------- | -------- | ----------------------------------------------------------------------------------------------------- |
@@ -35,7 +35,7 @@
 | `isLoadingSelf`                  | `boolean`                                                                   | `false`                      | ❌       | Control loading of form manually                                                                      |
 | `letterProps`                    | [Letter Props](#letter-props)                                               | `{}`                         | ❌       | Set props for supporting form letter                                                                  |
 
-### Letter Props
+#### Letter Props
 
 | Prop Name            | Type            | Default          | Required | Description                                            |
 | -------------------- | --------------- | ---------------- | -------- | ------------------------------------------------------ |
@@ -49,9 +49,9 @@
 | `protectLetterIf`    | `boolean`       | false            | ❌       | Protect field letter by making the field is readOnly   |
 | `isDigitalSignature` | `boolean`       | false            | ❌       | Turn wpform for support digital signature              |
 
-### Usage
+#### Usage
 
-#### Regular Form
+###### Regular Form
 
 ```jsx
 /* file src/pages/hrm/test-page/components/wp-form/TestWPForm.js */
@@ -74,7 +74,7 @@ const FormPage = (props) => {
 export default FormPage;
 ```
 
-#### Form Request
+###### Form Request
 
 ```jsx
 /* file src/pages/hrm/test-page/components/wp-form/TestWPForm.js */

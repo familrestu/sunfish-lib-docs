@@ -1,12 +1,12 @@
-## 📌 Helpers: useOnFetch
+### 📌 Helpers: useOnFetch
 
-### Overview
+#### Overview
 - **Name**: `useOnFetch`  
 - **Description**: standard fetch hooks
 - **Import path**: `lib/helpers/utils/useOnFetch`
 - - **Origin functions**: axios version 1.6.5
 
-### Usage
+#### Usage
 ```jsx
 import { useEffect } from 'react'
 import useOnFetch from 'lib/helpers/utils/useOnFetch'

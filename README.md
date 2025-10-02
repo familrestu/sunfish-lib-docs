@@ -236,7 +236,7 @@ export default FormPage;
 
 ## 📚 Hooks List
 
-### 📌 Helpers: useOnFetch
+### 📌 Custom Hooks: useOnFetch
 
 #### Overview
 - **Name**: `useOnFetch`  

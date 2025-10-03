@@ -8,46 +8,46 @@
 
 #### Props
 
-| Prop Name                        | Type                                                                        | Default                      | Required | Description                                                                                           |
-| -------------------------------- | --------------------------------------------------------------------------- | ---------------------------- | -------- | ----------------------------------------------------------------------------------------------------- |
-| `accesscode`                     | `string`                                                                    | —                            | ❌       | Access code to check if user authorize to view this page or not                                       |
-| `datasource`                     | `string`                                                                    | —                            | ❌       | API for fetch default data to fill form automatically                                                 |
-| `customFetchResult`              | `(data:Record<string, any>, response: any )=>Record<string, any>[]`         | —                            | ❌       | Customize result after succedeed fetch data                                                           |
-| `formAction`                     | `string`                                                                    | -                            | ❌       | Set API for submit data                                                                               |
-| `deleteAction`                   | `string`                                                                    | -                            | ❌       | Set API for delete data                                                                               |
-| `beforeSubmit`                   | `(data:Record<string, any>, response: any )=>Record<string, any>`           | —                            | ❌       | Reconstruction data payload before sent to backend service                                            |
-| `isWorkFlow`                     | `boolean`                                                                   | —                            | ❌       | Turn form into form request                                                                           |
-| `keyData`                        | `Record<string,any>`                                                        | —                            | ❌       | Set paylaoad when fetch and sent data to be. Would wrap data inside of `KEY` word                     |
-| `reqData`                        | `Record<string,any>`                                                        | —                            | ❌       | Set paylaoad when fetch data only and doesn't wrap with any key                                       |
-| `onModalResultOk`                | `(resultType: 'error, warning, success, confirm' )=>void`                   | —                            | ❌       | Event after success submit                                                                            |
-| `onModalResultDeleteOk`          | `(resultType: 'error, warning, success, confirm' )=>void`                   | —                            | ❌       | Event after success delete data, it will active if `datasource` is filled                             |
-| `onSuccessCallback`              | `(res: Record<string, any>, successMsg: string, formAction: string )=>void` | Showing notification success | ❌       | Override default function of success after submit form                                                |
-| `onErrorCallback`                | `(err: Error, errMsg: string, formAction: string )=>void`                   | Showing notification error   | ❌       | Override default function of error after submit form                                                  |
-| `showButton`                     | `boolean`                                                                   | `true`                       | ❌       | Show/hide all button form, except `extraButton`                                                       |
-| `customPayload`                  | `Record<string, any>`                                                       | `{}`                         | ❌       | Append additional payload and wrapped inside of `ENTRIES` key if `isWrapPayloadWithEntries` is `true` |
-| `isWrapPayloadWithEntries`       | `boolean`                                                                   | `true`                       | ❌       | Wrapping payload inside of `ENTRIES` key                                                              |
-| `disableCancelButtonIf`          | `boolean`                                                                   | `false`                      | ❌       | Control disable of cancel button                                                                      |
-| `disableDeleteButtonIf`          | `boolean`                                                                   | `false`                      | ❌       | Control disable of delete button                                                                      |
-| `disableDraftButtonIf`           | `boolean`                                                                   | `false`                      | ❌       | Control disable of delete button                                                                      |
-| `disableSubmitButtonIf`          | `boolean`                                                                   | `false`                      | ❌       | Control disable of submit button                                                                      |
-| `disablePreviewApproverButtonIf` | `boolean`                                                                   | `false`                      | ❌       | Control disable of preview approver button                                                            |
-| `apiType`                        | `lc, go, py-go, hrm-go`                                                     | `lc`                         | ❌       | Set type of api when submit, delete nd fetch data of form                                             |
-| `isLoadingSelf`                  | `boolean`                                                                   | `false`                      | ❌       | Control loading of form manually                                                                      |
-| `letterProps`                    | [Letter Props](#letter-props)                                               | `{}`                         | ❌       | Set props for supporting form letter                                                                  |
+| Prop Name | Type | Default | Required | Description |
+| ---- | ---- | ---- | ---- | ---- |
+| `accesscode` | `string` | — | ❌ | Access code to check if user authorize to view this page or not |
+| `datasource` | `string` | — | ❌ | API for fetch default data to fill form automatically |
+| `formAction` | `string` | — | ❌ | Set API for submit data |
+| `deleteAction` | `string` | — | ❌ | Set API for delete data |
+| `customFetchResult` | `(data:Record<string, any>, response: any )=>Record<string, any>[]` | — | ❌ | Customize result after succedeed fetch data |
+| `beforeSubmit` | `(data:Record<string, any>, response: any )=>Record<string, any>` | — | ❌ | Reconstruction data payload before sent to backend service |
+| `isWorkFlow` | `boolean` | — | ❌ | Turn form into form request |
+| `keyData` | `Record<string,any>` | — | ❌ | Set paylaoad when fetch and sent data to be. Would wrap data inside of `KEY`, word. this props will be required when datasource is specified |
+| `reqData` | `Record<string,any>` | — | ❌ | Set paylaoad when fetch data only and doesn't wrap with any key |
+| `onModalResultOk` | `(resultType: 'error, warning, success, confirm' )=>void` | — | ❌ | Event after success submit |
+| `onModalResultDeleteOk` | `(resultType: 'error, warning, success, confirm' )=>void` | — | ❌ | Event after success delete data, it will active if `datasource` is filled |
+| `onSuccessCallback` | `(res: Record<string, any>, successMsg: string, formAction: string )=>void` | Showing notification success | ❌ | Override default function of success after submit form |
+| `onErrorCallback` | `(err: Error, errMsg: string, formAction: string )=>void` | Showing notification error | ❌ | Override default function of error after submit form |
+| `showButton` | `boolean` | `true` | ❌ | Show/hide all button form, except `extraButton` |
+| `customPayload` | `Record<string, any>` | `{}` | ❌ | Append additional payload and wrapped inside of `ENTRIES` key if `isWrapPayloadWithEntries` is `true` |
+| `isWrapPayloadWithEntries` | `boolean` | `true` | ❌ | Wrapping payload inside of `ENTRIES` key|
+| `disableCancelButtonIf`| `boolean` | `false`| ❌ | Control disable of cancel button|
+| `disableDeleteButtonIf`| `boolean` | `false`| ❌ | Control disable of delete button|
+| `disableDraftButtonIf` | `boolean` | `false`| ❌ | Control disable of delete button|
+| `disableSubmitButtonIf`| `boolean` | `false`| ❌ | Control disable of submit button|
+| `disablePreviewApproverButtonIf` | `boolean` | `false`| ❌ | Control disable of preview approver button|
+| `apiType`| `lc, go, py-go, hrm-go` | `lc` | ❌ | Set type of api when submit, delete nd fetch data of form |
+| `isLoadingSelf`| `boolean` | `false`| ❌ | Control loading of form manually|
+| `letterProps`| [Letter Props](#letter-props) | `{}` | ❌ | Set props for supporting form letter|
 
 #### Letter Props
 
-| Prop Name            | Type            | Default          | Required | Description                                            |
-| -------------------- | --------------- | ---------------- | -------- | ------------------------------------------------------ |
-| `letterContentProps` | `string`        | `letter_content` | ✅       | Name field of `letter content` value                   |
-| `letterNoProps`      | `string`        | `letter_no`      | ✅       | Name field of `letter no` value                        |
-| `emailToProps`       | `string`        | `email`          | ❌       | Name field of `email` value                            |
-| `headerName`         | `string`        | -                | ❌       | Name field of `header` value                           |
-| `footerName`         | `string`        | -                | ❌       | Name field of `footer` value                           |
-| `sendEmailAction`    | `string`        | -                | ❌       | Set api when send email                                |
-| `customPayloadList`  | `string,string` | -                | ❌       | Get custom payload by name setted in customPayloadList |
-| `protectLetterIf`    | `boolean`       | false            | ❌       | Protect field letter by making the field is readOnly   |
-| `isDigitalSignature` | `boolean`       | false            | ❌       | Turn wpform for support digital signature              |
+| Prop Name| Type| Default| Required | Description|
+| ---- | ---- | ---- | ---- | ---- |
+| `letterContentProps` | `string`| `letter_content` | ✅ | Name field of `letter content` value |
+| `letterNoProps`| `string`| `letter_no`| ✅ | Name field of `letter no` value|
+| `emailToProps` | `string`| `email`| ❌ | Name field of `email` value|
+| `headerName` | `string`| -| ❌ | Name field of `header` value |
+| `footerName` | `string`| -| ❌ | Name field of `footer` value |
+| `sendEmailAction`| `string`| -| ❌ | Set api when send email|
+| `customPayloadList`| `string,string` | -| ❌ | Get custom payload by name setted in customPayloadList |
+| `protectLetterIf`| `boolean` | false| ❌ | Protect field letter by making the field is readOnly |
+| `isDigitalSignature` | `boolean` | false| ❌ | Turn wpform for support digital signature|
 
 ---
 
@@ -93,8 +93,58 @@ const FormPage = (props) => {
       datasource="datasource-api"
       formAction="submit-api"
       deleteAction="delete-api"
+      keyData={{
+        emp_id: 'emp_id'
+      }}
     >
       <WPControl type="text" name="field1" label="Field1" />
+    </WPForm>
+  );
+};
+
+export default FormPage;
+```
+
+---
+
+Updating form fetch result from datasource and updating payload before submit form to back-end
+
+```jsx
+/* file src/pages/hrm/test-page/components/wp-form/TestWPForm.js */
+import WPForm from 'lib/components/wp-form';
+import WPControl from 'lib/components/wp-form/wp-control';
+
+const FormPage = (props) => {
+  return (
+    <WPForm
+      accesscode="some-accesscode"
+      datasource="datasource-api"
+      formAction="submit-api"
+      deleteAction="delete-api"
+      customFetchResult={(formData) => {
+        formData.original_first_name = formData?.first_name;
+        formData.original_middle_name = formData?.middle_name;
+        formData.original_last_name = formData?.last_name;
+        
+        return formData
+      }}
+      beforeSubmit={(formData) => {
+        if(formData?.first_name) formData.first_name = formData?.original_first_name
+        if(formData?.middle_name) formData.middle_name = formData?.original_middle_name
+        if(formData?.last_name) formData.last_name = formData?.original_last_name
+        
+        return formData
+      }}
+    >
+      <WPControl type="text" name="emp_no" label="Employee No" />
+      <WPControl type="text" name="first_name" label="First Name" />
+      <WPControl type="text" name="middle_name" label="Middle Name" />
+      <WPControl type="text" name="last_name" label="Last Name" />
+
+      <WPControl type="text" name="emp_id" hidden />
+      <WPControl type="text" name="original_first_name" hidden />
+      <WPControl type="text" name="original_middle_name" hidden />
+      <WPControl type="text" name="original_last_name" hidden />
     </WPForm>
   );
 };

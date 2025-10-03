@@ -38,6 +38,11 @@ childrens of WPColumn
 | `listOptions`   | `{[key: string]: unknown}[]` | — | ❌ | if you want to give selection when search, lets say for gender, you can put an array `const listOptions = [{value: 0, title: 'Female'}, {value: 1, title: 'Male'}]` |
 | `width`   | `number` | 200 | ❌ | width of column |
 | `mask`   | `string` | — | ❌ | when you want to mask the result of the api, lets say you want 0 is equal to no, and 1 is equal to yes, then you can put `mask=0=No\|1=Yes` |
+| `linkto`   | `string` | — | ❌ | this will automatically render the column value as link `/somelink/::EMP_NO` notice the EMP_NO is the value you got from back-end, this will automatically encrypt the `EMP_NO` value |
+| `hiddenColumn`   | `boolean` | `false` | ❌ | when set to true then will be hidden in table column, but still able to be managed from show / manage column |
+| `primaryKey`   | `boolean` | `false` | ❌ | when set to true then cannot be managed in manage column drawer |
+
+
 
 #### Props WPColumnGroup
 childrens of WPColumnGroup
@@ -48,18 +53,28 @@ childrens of WPColumnGroup
 | `showSorter`   | `boolean` | `true` | ❌ | show sorter in table header |
 | `showSearch`   | `boolean` | `true` | ❌ | show search in table header |
 
+
+---
+
+
 #### Usage
+
+Simple Listing page
+
 ```jsx
 
 /* file pages/test/listing-page/ListingComponent */
+import { Link } from 'react-router-dom';
 import { Row, Col, Card } from 'antd';
 import WPListing, { WPColumn, WPColumnGroup } from 'lib/components/wp-listing'
+import { paramsEncrypt, encrypt } from 'lib/helpers/paramsCrypto';
 
 const ListingComponent = (props) => {
 
   return (
     <WPListing datasource="Employee._Listing">
-        <WPColumn title="Employee No" dataIndex="EMP_NO" />
+        <WPColumn title="Employee No" dataIndex="EMP_NO" type="link" linkto="/employee/employee-information/::EMP_ID" />
+        <WPColumn title="Employee No" dataIndex="EMP_NO" render={(_, record) => <Link to={paramsEncrypt(`/employee/employee-information/:${record?.EMP_ID}`)}>{`${record?.EMP_NAME} (${record?.EMP_NO})`}</Link>} />
         <WPColumn title="Employee Name" dataIndex="EMP_NAME" />
         <WPColumn title="Employee Position" dataIndex="POS_NAME" />
         <WPColumnGroup title="Personal Details">
@@ -73,3 +88,10 @@ const ListingComponent = (props) => {
 
 export default ListingComponent;
 ```
+
+in this example, you can see 2 type of link, first one is generated from listing, the second one is the one you create by yourself
+
+---
+
+Link
+

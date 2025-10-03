@@ -49,14 +49,16 @@
 | `protectLetterIf`    | `boolean`       | false            | ❌       | Protect field letter by making the field is readOnly   |
 | `isDigitalSignature` | `boolean`       | false            | ❌       | Turn wpform for support digital signature              |
 
+---
+
 #### Usage
 
-###### Regular Form
+Creaiting Regular Form
 
 ```jsx
 /* file src/pages/hrm/test-page/components/wp-form/TestWPForm.js */
-import WPForm from "lib/components/wp-form";
-import WPControl from "lib/components/wp-form/wp-control";
+import WPForm from 'lib/components/wp-form';
+import WPControl from 'lib/components/wp-form/wp-control';
 
 const FormPage = (props) => {
   return (
@@ -74,12 +76,14 @@ const FormPage = (props) => {
 export default FormPage;
 ```
 
-###### Form Request
+---
+
+Creating Form Request
 
 ```jsx
 /* file src/pages/hrm/test-page/components/wp-form/TestWPForm.js */
-import WPForm from "lib/components/wp-form";
-import WPControl from "lib/components/wp-form/wp-control";
+import WPForm from 'lib/components/wp-form';
+import WPControl from 'lib/components/wp-form/wp-control';
 
 const FormPage = (props) => {
   return (

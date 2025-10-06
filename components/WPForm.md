@@ -151,3 +151,93 @@ const FormPage = (props) => {
 
 export default FormPage;
 ```
+
+#### Frequently Asked Question
+
+- Q: how do I set value in Form?
+- A: for initial values of Form, you can you inside `initialValues` props in `WPForm`. eg:
+
+```jsx
+const Example = () => {
+  /* ... your other code ... */
+  return (
+    <WPForm initialValues={
+      emp_no: "XXXX"
+    }>
+      {/* your code  */}
+      <WPControl name="emp_no" type="text" />
+    </WPForm>
+  )
+}
+```
+
+- Q: how do I set value if the control field is dynamically rendered based on some value
+- A: we can use props `initialValue` from `Form.Item` components. eg:
+
+```jsx
+const Example = () => {
+  /* ... your other code ... */
+
+  const arrData = [{
+    emp_no_1: "XXX_1",
+    name_1: "NAME_1",
+    join_1: "2025-05-05",
+    end_1: null
+  }, {
+    emp_no_2: "XXX_2",
+    name_2: "NAME_2",
+    join_2: "2025-05-05",
+    end_2: "2025-10-06"
+  }]
+
+  return (
+    <WPForm>
+      {
+        arrData.map((item, index) => {
+          return (
+            <Row key={item[`emp_no_${index + 1}`]}>
+              <Col span={24}>
+                <WPControl type="text" name={`emp_no_${index + 1}`} formItemObj={{ initialValue: item[`emp_no_${index + 1}`] }} />
+                <WPControl type="text" name={`name_${index + 1}`} formItemObj={{ initialValue: item[`name_${index + 1}`] }} />
+                <WPControl type="text" name={`join_${index + 1}`} formItemObj={{ initialValue: item[`join_${index + 1}`] ? moment(item[`join_${index + 1}`]) : null }} />
+                <WPControl type="text" name={`end_${index + 1}`} formItemObj={{ initialValue: item[`end_${index + 1}`] ? moment(item[`end_${index + 1}`]) : null }} />
+              </Col>
+            </Row>
+          )
+        })
+      }
+    </WPForm>
+  )
+}
+```
+
+- Q: how do we set value when we click another field? or when we fetch something to backend and set the response base on it
+- A: we can use `Form.Instance`, eg:
+
+```jsx
+const Example = () => [
+  const [form] = Form.useForm();
+
+  const fetchSomething = () => {
+    form.setFieldsValue({
+      emp_no: "XXX",
+      emp_name: "XXX"
+    })
+  }
+
+  return (
+    <WPForm form={form}>
+      <WPControl type="text" name="emp_no" label="emp_no" />
+      <WPControl type="text" name="emp_name" label="emp_name" />
+      <WPControl type="select" name="gender" label="gender" listOptions={[{ value: 0, label: 'Female' }, { value: 1, label: 'Male' }]} onChange={(value) => {        
+        form.setFieldsValue({ emp_name: `${value === 0 ? 'Mrs' : 'Mr'} ${form.getFieldValue(emp_name)}` })
+      }} />
+    </WPForm>
+  )
+]
+```
+
+
+
+- Q: why our page become error when set field of date?
+- A: make sure to format your date into `moment` format data 

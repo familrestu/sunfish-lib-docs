@@ -13,7 +13,7 @@ We are using **Ant Design v4**, so some components combine AntD props.
 - [WPPage](./components/WPPage.md)
 - [WPForm](./components/WPForm.md)
 - [WPListing](./components/WPListing.md)
-<!-- - [WPControl](./components/wpcontrol/README.md) -->
+- [WPControl](./components/wpcontrol/README.md)
 
 ---
 

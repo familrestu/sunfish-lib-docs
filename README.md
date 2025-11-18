@@ -13,13 +13,15 @@ We are using **Ant Design v4**, so some components combine AntD props.
 - [WPPage](./components/WPPage.md)
 - [WPForm](./components/WPForm.md)
 - [WPListing](./components/WPListing.md)
-- [WPControl](./components/wpcontrol/README.md)
+- [WPControl](./components/WPControl.md)
+- [ComponentAccess](./components/ComponentAccess.md)
 
 ---
 
 ## 📚 Hooks List
 
 - [useOnFetch](./hooks/useOnFetch.md)
+- [useComponentAccess](./hooks/useComponentAccess.md)
 
 ---
 
@@ -29,3 +31,19 @@ We are using **Ant Design v4**, so some components combine AntD props.
 - [formatDataResponseLC](./helpers/formatDataResponseLC.md)
 
 ---
+
+## Coding Structure
+```
+.
+├── src/
+│   ├── pages/
+│   │   ├── menu-page/
+│   │   │   ├── components/
+│   │   │   │   ├── SpecificComponentA.js
+│   │   │   │   └── SpecificComponentB.js
+│   │   │   ├── contexts/
+│   │   │   │   ├── ContextMenuPageProvider.js
+│   │   │   │   └── ContextMenuPage.js
+│   │   │   ├── MenuPage.js
+│   │   │   └── index.js
+```
